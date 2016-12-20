@@ -46,6 +46,7 @@ module.exports = {
  *
  * @param {Object<string>} resources
  * @returns {Array}
+ * @private
  */
 function expandResources (resources) {
   var expanded = Object.keys(resources).map(function (prefix) {
@@ -70,6 +71,7 @@ function expandResources (resources) {
 
 /**
  * Return either a directory tree or the name of the file specified by the parameter
+ * @private
  */
 function readTreeOrFile (filename) {
   return Q.ninvoke(fs, 'stat', filename)
