@@ -21,10 +21,8 @@ module.exports = {
 
   preprocessConfig: function (config) {
     // Expand dirs into all recursive files
-
     return {
       resources: expandResources(config.resources)
-
     }
   },
 
