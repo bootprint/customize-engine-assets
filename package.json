@@ -28,11 +28,20 @@
     "version": "thoughtful changelog -o -a && npm run thought",
     "preversion": "npm run thoughtcheck"
   },
-  "dependencies": {},
   "devDependencies": {
+    "chai": "^3.5.0",
+    "customize": "^1.0.0",
+    "deep-aplus": "^1.0.4",
     "ghooks": "^1.0.3",
+    "m-io": "^0.3.1",
     "mocha": "^2.3.3",
-    "thoughtful-release": "^0.3.0"
+    "q-deep": "^1.0.3",
+    "stream-to-string": "^1.1.0",
+    "thoughtful-release": "^0.3.0",
+    "trace-and-clarify-if-possible": "^1.0.0"
+  },
+  "peerDependencies": {
+    "customize": "^1.0.0"
   },
   "standard": {
     "ignore": [
@@ -41,6 +50,7 @@
   },
   "files": [
     "index.js",
+    "schema.js",
     "lib",
     "bin"
   ],
@@ -49,5 +59,6 @@
       "pre-commit": "standard"
     }
   },
-  "keywords": [  ]
+  "keywords": [],
+  "dependencies": {}
 }
