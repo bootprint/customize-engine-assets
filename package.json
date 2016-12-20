@@ -19,7 +19,7 @@
   "license": "MIT",
   "scripts": {
     "preformat": "standard --version || npm -g install standard",
-    "format": "standard --format",
+    "format": "standard --fix",
     "pretest": "standard --version || npm -g install standard",
     "test": "mocha --recursive && standard",
     "thought": "thought run -a",
@@ -56,7 +56,7 @@
   ],
   "config": {
     "ghooks": {
-      "pre-commit": "standard"
+      "pre-push": "thoughtful precommit && standard"
     }
   },
   "keywords": [],
