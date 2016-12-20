@@ -4,14 +4,10 @@
   "description": "Customize-engine to copy static assets to the target directory",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bootprint/customize-engine-assets.git"
+    "url": "git+ssh://git@github.com/bootprint/customize-engine-assets.git"
   },
   "homepage": "https://github.com/bootprint/customize-engine-assets",
-  "author": {
-    "name": "Nils Knappmeier",
-    "email": "npm@knappi.org",
-    "url": "https://github.com/nknapp"
-  },
+  "author": "Nils Knappmeier <npm@knappi.org> (https://github.com/nknapp)",
   "bugs": {
     "url": "https://github.com/bootprint/customize-engine-assets/issues"
   },
@@ -61,6 +57,11 @@
   },
   "keywords": [],
   "dependencies": {
+    "lodash": "^4.17.2",
     "q": "^1.4.1"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
   }
 }
