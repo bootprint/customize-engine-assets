@@ -35,11 +35,11 @@ beforeEach(function () {
  * Convert all streams to strings
  * @param {{ assets: Object<stream.Readable>}} customizeResult the result of Customize using the assets-engine under the name "assets"
  */
-function convertToStrings(customizeResult) {
+function convertToStrings (customizeResult) {
   return deep(_.mapValues(customizeResult.assets, bufferStreamOrStringToString))
 }
 
-function bufferStreamOrStringToString(contents) {
+function bufferStreamOrStringToString (contents) {
   // Ignore undefined contents
   if (contents == null) {
     return

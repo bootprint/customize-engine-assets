@@ -7,11 +7,7 @@
 'use strict'
 
 var _ = require('lodash')
-var fs = require('fs')
-var Q = require('q')
-var qfs = require('m-io/fs')
 var readFiles = require('customize/helpers-io').readFiles
-var path = require('path')
 
 module.exports = {
   schema: require('./schema.js'),
