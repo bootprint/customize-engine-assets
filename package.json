@@ -27,6 +27,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "customize": "^1.0.0",
+    "customize-write-files": "^1.0.1",
     "deep-aplus": "^1.0.4",
     "ghooks": "^1.0.3",
     "m-io": "^0.3.1",
@@ -57,6 +58,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "customize": "^1.1.0",
     "lodash": "^4.17.2",
     "q": "^1.4.1"
   },

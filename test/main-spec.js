@@ -35,11 +35,11 @@ beforeEach(function () {
  * Convert all streams to strings
  * @param {{ assets: Object<stream.Readable>}} customizeResult the result of Customize using the assets-engine under the name "assets"
  */
-function convertToStrings (customizeResult) {
+function convertToStrings(customizeResult) {
   return deep(_.mapValues(customizeResult.assets, bufferStreamOrStringToString))
 }
 
-function bufferStreamOrStringToString (contents) {
+function bufferStreamOrStringToString(contents) {
   // Ignore undefined contents
   if (contents == null) {
     return
@@ -59,58 +59,41 @@ describe('customize-engine-assets:', function () {
       .registerEngine('assets', require('../'))
       .merge({
         assets: {
-          resources: {
-            'a/a.txt': './test/fixtures/a.txt',
-            'b.txt': './test/fixtures/b.txt',
-            'dir1': './test/fixtures/dir1',
-            'dir2': './test/fixtures/dir2'
-          }
+          directory: './test/fixtures/dir1'
         }
       })
       .run()
       .then(convertToStrings)
       .then(function (tree) {
         return expect(tree, 'Checking directory tree').to.deep.equal({
-          'a/a.txt': 'a',
-          'b.txt': 'b',
-          'dir1/eins.txt': 'eins',
-          'dir1/einsA.txt': 'einsA',
+          'eins.txt': 'eins',
+          'einsA.txt': 'einsA',
           'dir2/zwei.txt': 'zwei',
           'dir2/zweiA.txt': 'zweiA'
         })
       })
   })
 
-  it('should overrid files and directories', function () {
+  it('should override files and directories', function () {
     return customize()
       .registerEngine('assets', require('../'))
       .merge({
         assets: {
-          resources: {
-            'a/a.txt': './test/fixtures/a.txt',
-            'b.txt': './test/fixtures/b.txt',
-            'dir1': './test/fixtures/dir1',
-            'dir2': './test/fixtures/dir2'
-          }
+          directory: './test/fixtures/dir1'
         }
       })
       .merge({
         assets: {
-          resources: {
-            'a/a.txt': './test/fixtures/a-override.txt',
-            'dir1': './test/fixtures/dir1Override'
-          }
+          directory: './test/fixtures/dir1Override'
         }
       })
       .run()
       .then(convertToStrings)
       .then(function (tree) {
         return expect(tree, 'Checking directory tree').to.deep.equal({
-          'a/a.txt': 'a-override',
-          'b.txt': 'b',
-          'dir1/eins.txt': 'einsOverride',
-          'dir1/einsA.txt': 'einsA',
-          'dir2/zwei.txt': 'zwei',
+          'eins.txt': 'einsOverride',
+          'einsA.txt': 'einsA',
+          'dir2/zwei.txt': 'zweiOverride',
           'dir2/zweiA.txt': 'zweiA'
         })
       })

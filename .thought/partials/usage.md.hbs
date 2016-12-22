@@ -1,0 +1,25 @@
+## Usage
+
+The module makes only sense in combination with {{npm 'customize-write-files'}}
+Consider the following directory tree:
+
+{{{dirTree 'examples/' 'directory*/**'}}}
+
+The following example copies `directory1` to the `target` directory.
+
+{{{example 'examples/example.js'}}}
+
+This examples copies the files from [examples/directory](examples/directory)
+and [examples/directory2](examples/directory2) to [examples/target](examples/target)
+
+The output of the example is 
+
+{{{exec 'node example.js' cwd='examples/'}}}
+
+It's noteworthy that the example does not copy `directory1/subdir/file2.txt` and 
+then overwrites the file with `directory2/subdir/file2.txt`. Instead, when
+`.run()` is called, it is evaluated which file will actually be copied and then,
+the engine returns a readable stream on the file, which is then used by
+{{npm 'customize-write-files'}} to copy to file to the target directory.
+
+
