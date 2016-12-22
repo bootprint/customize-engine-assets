@@ -21,7 +21,7 @@ Consider the following directory tree:
 
 <pre><code>
 
-├─┬ directory
+├─┬ directory1
 │ ├── customize-logo-small.png
 │ ├── file1.txt
 │ └─┬ subdir
@@ -64,7 +64,10 @@ and [examples/directory2](examples/directory2) to [examples/target](examples/tar
 The output of the example is 
 
 ```
-[ 'target/file3.txt', 'target/subdir/file2.txt' ]
+[ 'target/customize-logo-small.png',
+  'target/file1.txt',
+  'target/subdir/file2.txt',
+  'target/file3.txt' ]
 ```
 
 It's noteworthy that the example does not copy `directory1/subdir/file2.txt` and 
