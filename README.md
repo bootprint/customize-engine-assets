@@ -1,5 +1,7 @@
 # customize-engine-assets 
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bootprint/customize-engine-assets.svg)](https://greenkeeper.io/)
+
 [![NPM version](https://badge.fury.io/js/customize-engine-assets.svg)](http://badge.fury.io/js/customize-engine-assets)
 [![Travis Build Status](https://travis-ci.org/bootprint/customize-engine-assets.svg?branch=master)](https://travis-ci.org/bootprint/customize-engine-assets)
 [![Coverage Status](https://img.shields.io/coveralls/bootprint/customize-engine-assets.svg)](https://coveralls.io/r/bootprint/customize-engine-assets)
