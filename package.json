@@ -58,7 +58,7 @@
   "keywords": [],
   "dependencies": {
     "lodash": "^4.17.2",
-    "q": "^1.4.1"
+    "q": "1.4.1"
   },
   "directories": {
     "example": "examples",
