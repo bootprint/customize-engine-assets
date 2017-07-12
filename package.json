@@ -25,7 +25,7 @@
     "preversion": "npm run thoughtcheck"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.1.0",
     "customize": "^1.0.0",
     "deep-aplus": "^1.0.4",
     "ghooks": "^2.0.0",
